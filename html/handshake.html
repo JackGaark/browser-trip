@@ -1,0 +1,50 @@
+<!-- 3. Handshake -->
+<section
+  class="scene sketch"
+  id="s-hs"
+  data-ring="1 · fetch"
+  aria-labelledby="h-hs"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">tcp + tls handshake</p>
+      <h2 id="h-hs">Shaking hands before saying anything</h2>
+      <p>
+        A new connection costs round trips before the first byte of the page
+        arrives. TCP agrees to talk. TLS agrees on encryption keys and proves
+        the server is who it claims to be. Only then does the request go out.
+      </p>
+      <div class="seg" role="radiogroup" aria-label="TLS version">
+        <input type="radio" name="tls" id="tls13" value="1.3" checked /><label
+          for="tls13"
+          >TLS 1.3</label
+        >
+        <input type="radio" name="tls" id="tls12" value="1.2" /><label
+          for="tls12"
+          >TLS 1.2</label
+        >
+      </div>
+      <div class="range">
+        <label for="rtt"
+          >Round-trip time <output id="rttOut" for="rtt">80 ms</output></label
+        ><input type="range" id="rtt" min="10" max="300" step="10" value="80" />
+      </div>
+      <div class="row">
+        <button type="button" class="btn pri" id="hsGo">▶ Send Pip</button>
+      </div>
+      <p class="readout" role="status">
+        <span class="big" id="hsMs">240 ms</span><br /><span id="hsSum"
+          >3 round trips before the first byte of the page.</span
+        >
+      </p>
+    </div>
+    <div class="stagebox">
+      <div class="panel"><div class="host" id="hsSvg"></div></div>
+      <ul class="legend">
+        <li><span class="sw" style="background: #5d544c"></span>TCP</li>
+        <li><span class="sw" style="background: #2f5fb3"></span>TLS</li>
+        <li><span class="sw" style="background: #d9573f"></span>HTTP</li>
+      </ul>
+    </div>
+  </div>
+</section>

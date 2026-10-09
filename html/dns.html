@@ -1,0 +1,38 @@
+<!-- 2. DNS -->
+<section
+  class="scene blue"
+  id="s-dns"
+  data-ring="1 · fetch"
+  aria-labelledby="h-dns"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">dns lookup</p>
+      <h2 id="h-dns">A name becomes a number</h2>
+      <p>
+        Networks route by IP address, not by name. To find
+        <code id="dnsHost">example.com</code>, the browser first checks answers
+        it already remembers. If those miss, a recursive resolver walks the
+        naming tree for it, from the root servers down to the domain’s own.
+      </p>
+      <div class="row">
+        <button type="button" class="btn pri" id="dnsGo">▶ Resolve</button>
+        <label class="check"
+          ><input type="checkbox" id="dnsWarm" /> Visited recently</label
+        >
+      </div>
+      <p class="readout" id="dnsSum" role="status">
+        Press Resolve. The host name comes from the address you entered in scene
+        1.
+      </p>
+      <ol class="log" id="dnsLog" aria-label="Lookup log"></ol>
+    </div>
+    <div class="stagebox">
+      <div class="panel"><div class="host" id="dnsSvg"></div></div>
+      <p class="note">
+        Times are illustrative. 203.0.113.42 belongs to an address block
+        reserved for documentation.
+      </p>
+    </div>
+  </div>
+</section>

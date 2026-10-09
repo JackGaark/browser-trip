@@ -1,0 +1,55 @@
+/* Hero */
+.hero .inner {
+  align-items: center;
+}
+.deck {
+  font-size: clamp(1.1rem, 1.9vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 52ch;
+}
+.toc {
+  max-width: 1140px;
+  margin: clamp(32px, 5vw, 56px) auto 0;
+}
+.toc p {
+  font: 700 1.5rem var(--f-hand);
+  margin-bottom: 8px;
+}
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+.toc a {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 8px 12px;
+  min-height: 44px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  background: var(--soft);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.toc a:hover {
+  background: #fff;
+}
+.toc a span {
+  font: 600 0.72rem var(--f-mono);
+  color: var(--muted);
+}
+.toc a.dk {
+  background: var(--navy);
+  color: #e8eefc;
+  border-color: var(--navy);
+}
+.toc a.dk span {
+  color: #a3b3d8;
+}

@@ -1,0 +1,42 @@
+<!-- 6. Scripts -->
+<section
+  class="scene sketch"
+  id="s-scripts"
+  data-ring="2 · parse"
+  aria-labelledby="h-sc"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">scripts can pause the parser</p>
+      <h2 id="h-sc">One script tag can stop everything</h2>
+      <p>
+        When the parser meets a script, it has to decide whether it may keep
+        reading. A plain script could rewrite the page as it runs, so the parser
+        waits. Two attributes change that.
+      </p>
+      <div class="seg" role="radiogroup" aria-label="Script loading mode">
+        <input
+          type="radio"
+          name="sc"
+          id="scPlain"
+          value="plain"
+          checked
+        /><label for="scPlain">plain</label>
+        <input type="radio" name="sc" id="scAsync" value="async" /><label
+          for="scAsync"
+          >async</label
+        >
+        <input type="radio" name="sc" id="scDefer" value="defer" /><label
+          for="scDefer"
+          >defer</label
+        >
+      </div>
+      <pre class="snip" id="scSnip"></pre>
+      <p class="readout" id="scText" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="panel"><div class="host" id="scSvg"></div></div>
+      <p class="note">Illustrative timings in milliseconds.</p>
+    </div>
+  </div>
+</section>

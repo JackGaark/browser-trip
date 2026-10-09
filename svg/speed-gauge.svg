@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="fig gauge" viewBox="0 0 200 112" role="img" aria-label="Speed gauge" id="gauge">
+            <path d="M24 96 A76 76 0 0 1 176 96" fill="none" stroke="#2e4378" stroke-width="10" stroke-linecap="round"/>
+            <path d="M24 96 A76 76 0 0 1 176 96" fill="none" stroke="#ffb35c" stroke-width="10" stroke-linecap="round" stroke-dasharray="239" stroke-dashoffset="239" id="gArc" style="transition:stroke-dashoffset .6s"/>
+            <line class="needle" id="needle" x1="100" y1="96" x2="100" y2="34"/>
+            <circle cx="100" cy="96" r="6" fill="#ffb35c"/>
+            <text x="18" y="110">1×</text><text x="170" y="110">20×</text>
+          </svg>

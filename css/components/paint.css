@@ -1,0 +1,56 @@
+/* Paint */
+.paint-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .paint-grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+}
+.dlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+  counter-reset: dl;
+  font: 0.8rem/1.4 var(--f-mono);
+}
+.dlist li {
+  display: grid;
+  grid-template-columns: 1.8em 6.3em minmax(0, 1fr);
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: var(--muted);
+}
+.dlist li::before {
+  counter-increment: dl;
+  content: counter(dl);
+  color: var(--line);
+  text-align: right;
+}
+.dlist li.done {
+  color: var(--ink);
+}
+.dlist li.now {
+  background: rgba(255, 179, 92, 0.18);
+  color: var(--ink);
+  box-shadow: inset 3px 0 0 var(--acc);
+}
+.dlist li b {
+  color: var(--acc2);
+  font-weight: 600;
+}
+canvas.pcv {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 320 / 220;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-inline: auto;
+}

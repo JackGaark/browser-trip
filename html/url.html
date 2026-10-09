@@ -1,0 +1,59 @@
+<!-- 1. URL -->
+<section
+  class="scene sketch"
+  id="s-url"
+  data-ring="1 · fetch"
+  aria-labelledby="h-url"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">type a url</p>
+      <h2 id="h-url">First, the browser guesses what you meant</h2>
+      <p>
+        The address bar doubles as a search box, so step one is a decision:
+        address or search? If it looks like an address, the browser splits it
+        into parts and fills in anything you left out.
+      </p>
+      <p>
+        Edit the address in the window, or try
+        <button type="button" class="link" data-try="cats wearing hats">
+          a search</button
+        >,
+        <button type="button" class="link" data-try="localhost:3000/admin">
+          localhost</button
+        >, or
+        <button
+          type="button"
+          class="link"
+          data-try="https://shop.example:8443/cart?id=42#pay"
+        >
+          a full URL</button
+        >. Then press Enter.
+      </p>
+      <p class="readout" id="urlVerdict" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="win">
+        <div class="win-top">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span
+          ><span class="win-tab" id="urlTab">New tab</span>
+        </div>
+        <form class="win-addr" id="urlForm">
+          <label for="urlIn" class="sr">Address bar</label>
+          <input
+            id="urlIn"
+            value="example.com/docs?lang=en#intro"
+            autocomplete="off"
+            spellcheck="false"
+            autocapitalize="off"
+          />
+          <button class="btn pri sm" type="submit">Enter ↵</button>
+        </form>
+        <div class="win-body">
+          <span data-svg="url-pip" style="display: contents"></span>
+          <dl class="parts" id="urlParts"></dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

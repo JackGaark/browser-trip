@@ -1,0 +1,64 @@
+/* Outro */
+.trip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.trip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  font: 600 0.85rem var(--f-mono);
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+.trip a span {
+  color: var(--muted);
+}
+.trip a.lit {
+  background: var(--acc);
+  border-color: var(--acc);
+  color: #1d1404;
+}
+.trip a.lit span {
+  color: #1d1404;
+}
+.outro-pip {
+  width: 70px;
+  height: 76px;
+}
+.footnotes {
+  max-width: 1140px;
+  margin: 56px auto 0;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  display: grid;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+.footnotes a {
+  color: var(--acc2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

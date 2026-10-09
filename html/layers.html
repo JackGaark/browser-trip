@@ -1,0 +1,87 @@
+<!-- 9. Layers -->
+<section
+  class="scene sketch"
+  id="s-layers"
+  data-ring="6 · composite"
+  aria-labelledby="h-layers"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">layers</p>
+      <h2 id="h-layers">A page is a stack of transparent sheets</h2>
+      <p>
+        Parts of a page that move, scroll on their own or float on top get their
+        own layer. Layers are painted separately and stacked at the end, so
+        moving one doesn’t mean repainting the rest.
+      </p>
+      <div class="range">
+        <label for="explode"
+          >Pull the layers apart
+          <output id="exOut" for="explode">70%</output></label
+        ><input type="range" id="explode" min="0" max="100" value="70" />
+      </div>
+      <h3 style="font: 800 1.25rem var(--f-display); margin: 12px 0 0">
+        What does an animation cost?
+      </h3>
+      <p>
+        Pick the CSS property being animated. The lit stages re-run on every
+        frame.
+      </p>
+      <div class="seg" role="radiogroup" aria-label="Animated property">
+        <input
+          type="radio"
+          name="prop"
+          id="prT"
+          value="transform"
+          checked
+        /><label for="prT">transform</label>
+        <input type="radio" name="prop" id="prO" value="opacity" /><label
+          for="prO"
+          >opacity</label
+        >
+        <input type="radio" name="prop" id="prC" value="color" /><label
+          for="prC"
+          >background</label
+        >
+        <input type="radio" name="prop" id="prW" value="width" /><label
+          for="prW"
+          >width</label
+        >
+      </div>
+      <p class="readout" id="costText" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="stack-wrap" aria-hidden="true">
+        <div class="stack" id="stack">
+          <div class="layer l0">
+            <i style="width: 70%"></i><i></i><i style="width: 85%"></i
+            ><i style="width: 60%"></i><span class="lname">page</span>
+          </div>
+          <div class="layer l1"><span class="lname">sticky header</span></div>
+          <div class="layer l2"><span class="lname">animated card</span></div>
+          <div class="layer l3"><span class="lname">video</span></div>
+          <div class="layer l4"><span class="lname">modal</span></div>
+        </div>
+      </div>
+      <div class="panel" style="display: grid; gap: 12px">
+        <div class="demo-track">
+          <div class="demo-box p-transform" id="demoBox"></div>
+        </div>
+        <div class="pipeline" id="pipeline">
+          <div class="pchip" data-st="style">
+            Style<small>recompute CSS</small>
+          </div>
+          <div class="pchip" data-st="layout">
+            Layout<small>geometry</small>
+          </div>
+          <div class="pchip" data-st="paint">
+            Paint<small>draw calls</small>
+          </div>
+          <div class="pchip" data-st="composite">
+            Composite<small>GPU stacks layers</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

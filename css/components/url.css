@@ -1,0 +1,122 @@
+/* Scene 1: browser window */
+.win {
+  border: 2.5px solid var(--ink);
+  border-radius: 14px;
+  background: #fffdf8;
+  box-shadow: 5px 6px 0 rgba(42, 36, 32, 0.16);
+  overflow: hidden;
+}
+.win-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #ece2cc;
+  border-bottom: 2px solid var(--ink);
+}
+.dots {
+  display: flex;
+  gap: 6px;
+}
+.dots i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  background: #e9765f;
+}
+.dots i:nth-child(2) {
+  background: #f2c14e;
+}
+.dots i:nth-child(3) {
+  background: #7cc49a;
+}
+.win-tab {
+  font: 600 0.82rem var(--f-mono);
+  background: #fffdf8;
+  padding: 4px 12px;
+  border: 2px solid var(--ink);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: -10px;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.win-addr {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1.5px dashed var(--line);
+}
+.win-addr input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 0 16px;
+  font: 500 0.95rem var(--f-mono);
+  background: #fff;
+  color: var(--ink);
+}
+.win-body {
+  padding: 8px 16px 18px;
+  display: grid;
+  gap: 12px;
+}
+.pipstage {
+  width: 100%;
+  max-width: 340px;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
+.parts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+}
+.part {
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  padding: 6px 10px;
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  background: #fffaf0;
+}
+.part.wide {
+  grid-column: 1 / -1;
+}
+.part dt {
+  font: 700 0.7rem var(--f-body);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+.part dd {
+  margin: 0;
+  font: 600 0.9rem var(--f-mono);
+  overflow-wrap: anywhere;
+}
+.part small {
+  font-size: 0.74rem;
+  color: var(--acc2);
+  font-weight: 700;
+}
+.part.new {
+  animation: pop 0.35s ease-out both;
+}
+@keyframes pop {
+  from {
+    transform: translateY(6px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

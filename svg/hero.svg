@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="fig" viewBox="0 0 520 360" role="img" aria-label="Pip, a small green envelope with legs, waving from inside a hand-drawn browser window.">
+        <g filter="url(#rough)" stroke="#2a2420" stroke-width="2.4" stroke-linejoin="round">
+          <path d="M40 74 q-28 0 -26 -18 q2 -16 22 -12 q8 -18 28 -8 q18 -6 22 10 q16 2 10 16 q-4 12 -20 12z" fill="#fffdf8"/>
+          <path d="M430 46 q-20 0 -18 -14 q2 -12 16 -9 q6 -14 22 -6 q14 -4 16 8 q12 2 8 12 q-3 9 -15 9z" fill="#fffdf8"/>
+          <rect x="70" y="62" width="380" height="270" rx="16" fill="#fffdf8"/>
+          <path d="M70 104 h380" />
+          <rect x="70" y="62" width="380" height="42" rx="16" fill="#ece2cc"/>
+          <circle cx="94" cy="83" r="6" fill="#e9765f"/><circle cx="114" cy="83" r="6" fill="#f2c14e"/><circle cx="134" cy="83" r="6" fill="#7cc49a"/>
+          <rect x="156" y="72" width="270" height="22" rx="11" fill="#fff"/>
+        </g>
+        <text x="172" y="88" style="font:500 12px 'JetBrains Mono', monospace" fill="#5d544c">https://example.com</text>
+        <g fill="#d6c9b1"><rect x="102" y="130" width="180" height="12" rx="6"/><rect x="102" y="152" width="230" height="8" rx="4"/><rect x="102" y="168" width="210" height="8" rx="4"/><rect x="102" y="184" width="150" height="8" rx="4"/></g>
+        <g class="bob"><use href="#pip" x="250" y="196" width="120" height="129"/>
+          <g class="wave"><path d="M352 262 q14 -8 20 -26" stroke="#2a2420" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="372" cy="234" r="5" fill="#93d6bb" stroke="#2a2420" stroke-width="2.4"/></g>
+        </g>
+        <text x="96" y="246" class="hand-l" style="font-size:24px">hi, I’m Pip!</text>
+        <path d="M200 252 q30 10 52 0" stroke="#2a2420" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>

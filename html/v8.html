@@ -1,0 +1,63 @@
+<!-- 11. V8 -->
+<section
+  class="scene blue"
+  id="s-v8"
+  data-ring="js · running code"
+  aria-labelledby="h-v8"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">v8: from source to machine code</p>
+      <h2 id="h-v8">JavaScript gets faster the more it runs</h2>
+      <p>
+        Engines start by interpreting bytecode, which starts quickly but runs
+        slowly. Code that runs often gets recompiled by faster tiers, which bet
+        on the types they have seen. Break that bet and the engine bails out, or
+        deoptimizes, back to the start.
+      </p>
+      <div class="row">
+        <button type="button" class="btn" data-calls="10">Call ×10</button>
+        <button type="button" class="btn" data-calls="200">×200</button>
+        <button type="button" class="btn pri" data-calls="2000">×2,000</button>
+        <button type="button" class="btn" data-calls="20000">×20,000</button>
+      </div>
+      <div class="row">
+        <button type="button" class="btn" id="v8Str">Call add('1', 2)</button
+        ><button type="button" class="btn" id="v8Reset">Reset</button>
+      </div>
+      <p class="readout" id="v8Msg" role="status"></p>
+      <p class="note">
+        Tiers are V8’s. Thresholds, speeds and the machine code shown are
+        illustrative; real engines decide from runtime feedback.
+      </p>
+    </div>
+    <div class="stagebox">
+      <div class="panel" style="display: grid; gap: 14px">
+        <pre
+          class="code"
+          style="min-height: 0"
+        ><span style="color:#ffb35c">function</span> add(a, b) { <span style="color:#ffb35c">return</span> a + b; }</pre>
+        <div class="v8-top">
+          <span data-svg="speed-gauge" style="display: contents"></span>
+          <div style="display: grid; gap: 8px">
+            <p>
+              <span class="big" id="v8Calls">0</span>
+              <span class="note">calls</span>
+            </p>
+            <p class="mono" style="font-size: 0.9rem">
+              ≈ <b id="v8Speed">1×</b> faster than the interpreter
+            </p>
+            <div class="heat" aria-hidden="true"><i id="v8Heat"></i></div>
+            <p class="note" id="v8Next"></p>
+          </div>
+        </div>
+        <ol class="tiers" id="tiers"></ol>
+        <pre
+          class="code"
+          id="v8Code"
+          aria-label="Code for the current tier"
+        ></pre>
+      </div>
+    </div>
+  </div>
+</section>

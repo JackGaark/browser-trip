@@ -1,0 +1,35 @@
+/* Gantt (HTTP) */
+.axis {
+  font: 10.5px var(--f-mono);
+  fill: var(--muted);
+}
+.gridl {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.rname {
+  font: 11px var(--f-mono);
+  fill: var(--ink);
+}
+.qline {
+  stroke: var(--muted);
+  stroke-dasharray: 3 3;
+  stroke-width: 1.5;
+}
+.wline {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+.ctag {
+  font: 600 9.5px var(--f-mono);
+  fill: #1d1404;
+}
+.done-l {
+  font: 600 11.5px var(--f-mono);
+  fill: var(--acc);
+}
+.done-line {
+  stroke: var(--acc);
+  stroke-dasharray: 4 3;
+  stroke-width: 1.5;
+}

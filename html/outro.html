@@ -1,0 +1,80 @@
+<!-- Outro -->
+<section
+  class="scene blue"
+  id="s-end"
+  data-ring="all stages"
+  aria-labelledby="h-end"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">how browsers work</p>
+      <h2 id="h-end">The whole trip, in about half a second</h2>
+      <p>
+        Fetch, parse, style, layout, paint, raster, composite, and JavaScript
+        running alongside. Replay the trip, or jump back to any stop.
+      </p>
+      <div class="row">
+        <button type="button" class="btn pri" id="tripGo">
+          ▶ Replay the trip
+        </button>
+      </div>
+    </div>
+    <div class="stagebox">
+      <span data-svg="outro-pip" style="display: contents"></span>
+      <ol class="trip" id="trip">
+        <li>
+          <a href="#s-url"><span>01</span>url</a>
+        </li>
+        <li>
+          <a href="#s-dns"><span>02</span>dns</a>
+        </li>
+        <li>
+          <a href="#s-hs"><span>03</span>handshake</a>
+        </li>
+        <li>
+          <a href="#s-http"><span>04</span>request</a>
+        </li>
+        <li>
+          <a href="#s-dom"><span>05</span>parse</a>
+        </li>
+        <li>
+          <a href="#s-scripts"><span>06</span>scripts</a>
+        </li>
+        <li>
+          <a href="#s-layout"><span>07</span>layout</a>
+        </li>
+        <li>
+          <a href="#s-paint"><span>08</span>paint</a>
+        </li>
+        <li>
+          <a href="#s-layers"><span>09</span>layers</a>
+        </li>
+        <li>
+          <a href="#s-raster"><span>10</span>raster</a>
+        </li>
+        <li>
+          <a href="#s-v8"><span>11</span>javascript</a>
+        </li>
+        <li>
+          <a href="#s-gc"><span>12</span>memory</a>
+        </li>
+        <li>
+          <a href="#s-proc"><span>13</span>processes</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <footer class="footnotes">
+    <p>
+      The scene-by-scene format was inspired by a short animated explainer. Pip,
+      the illustrations and every interactive here are original. Timings marked
+      illustrative are simplified to show proportions, not measurements.
+    </p>
+    <p>
+      Built to the same standards as before: real buttons and labels, live
+      regions for results, 44 px targets, reduced-motion support, and sound that
+      only plays after you turn it on. Sound is synthesized live with the Web
+      Audio API.
+    </p>
+  </footer>
+</section>

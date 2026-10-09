@@ -1,0 +1,50 @@
+<!-- 13. Processes -->
+<section
+  class="scene sketch"
+  id="s-proc"
+  data-ring="processes"
+  aria-labelledby="h-proc"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">one browser, many processes</p>
+      <h2 id="h-proc">Every site gets its own walled house</h2>
+      <p>
+        A modern browser is a small town of processes. The browser process runs
+        the window and tabs, a GPU process draws, and a network service fetches.
+        Each site gets its own sandboxed renderer process, so a crash, or an
+        attack, in one can’t reach the others. Even an iframe from another site
+        gets a separate one.
+      </p>
+      <div class="row">
+        <button type="button" class="btn" data-open="mail.example">
+          + mail.example
+        </button>
+        <button type="button" class="btn" data-open="news.example">
+          + news.example
+        </button>
+        <button type="button" class="btn" data-open="maps.example">
+          + maps.example
+        </button>
+      </div>
+      <div class="row">
+        <button type="button" class="btn pri" id="addFrame">
+          Embed an ads.example iframe
+        </button>
+      </div>
+      <p class="readout" id="procMsg" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="chrome">
+        <div
+          class="tabs"
+          id="tabs"
+          role="tablist"
+          aria-label="Demo browser tabs"
+        ></div>
+        <div class="tabview" id="tabView" role="tabpanel"></div>
+      </div>
+      <div class="town" id="town" aria-live="polite"></div>
+    </div>
+  </div>
+</section>

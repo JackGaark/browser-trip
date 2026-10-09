@@ -1,0 +1,63 @@
+/* Layout: full-bleed scenes, each a two-column "copy + stage" grid that stacks on phones.
+   Two committed visual worlds, alternating like chapters: warm graph-paper sketches and navy blueprints.
+   The page deliberately keeps these looks in both OS themes. */
+:root {
+  --paper: #f7f1e3;
+  --ink0: #2a2420;
+  --navy: #0e1c3f;
+  --f-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-body:
+    "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink0);
+  font: 400 1.05rem/1.6 var(--f-body);
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible {
+  outline: 3px solid #2f5fb3;
+  outline-offset: 3px;
+}
+.blue :focus-visible {
+  outline-color: #ffb35c;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.skip {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 60;
+  background: var(--ink0);
+  color: var(--paper);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.skip:focus {
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+}
+p {
+  margin: 0;
+}
+code {
+  font-family: var(--f-mono);
+  font-size: 0.86em;
+  padding: 0.05em 0.35em;
+  border-radius: 4px;
+  background: var(--chip);
+}

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="rough" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#2a2420" stroke-opacity=".16" stroke-width="2"/>
+    </pattern>
+    <symbol id="pip" viewBox="0 0 80 86">
+      <ellipse cx="40" cy="82" rx="22" ry="3" fill="#2a2420" opacity=".14"/>
+      <g filter="url(#rough)" stroke="#2a2420" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M31 66v10M49 66v10" stroke-width="3" fill="none"/>
+        <ellipse cx="29" cy="77" rx="5.5" ry="2.8" fill="#2a2420"/>
+        <ellipse cx="51" cy="77" rx="5.5" ry="2.8" fill="#2a2420"/>
+        <rect x="8" y="22" width="64" height="46" rx="9" fill="#93d6bb" stroke-width="3"/>
+        <rect x="8" y="22" width="64" height="46" rx="9" fill="url(#hatch)" stroke="none"/>
+        <path d="M11 26 L40 47 L69 26" fill="none" stroke-width="2.6"/>
+        <rect x="55" y="28" width="11" height="11" rx="1.5" fill="#f5d06f" stroke-width="1.8" stroke-dasharray="2 1.6"/>
+      </g>
+      <g class="blink"><circle cx="29" cy="53" r="3.4" fill="#2a2420"/><circle cx="51" cy="53" r="3.4" fill="#2a2420"/></g>
+      <circle cx="30.2" cy="51.8" r="1" fill="#fff"/><circle cx="52.2" cy="51.8" r="1" fill="#fff"/>
+      <path d="M36 59q4 3.5 8 0" fill="none" stroke="#2a2420" stroke-width="2.2" stroke-linecap="round"/>
+      <ellipse cx="21" cy="59" rx="4" ry="2.4" fill="#f29a8e" opacity=".75"/><ellipse cx="59" cy="59" rx="4" ry="2.4" fill="#f29a8e" opacity=".75"/>
+    </symbol>
+    <symbol id="server" viewBox="0 0 70 100">
+      <g filter="url(#rough)" stroke="#2a2420" stroke-width="2.6" stroke-linejoin="round">
+        <rect x="6" y="6" width="58" height="88" rx="6" fill="#c9d6ea"/>
+        <rect x="6" y="6" width="58" height="88" rx="6" fill="url(#hatch)" stroke="none"/>
+        <path d="M14 26h42M14 44h42M14 62h42M14 80h42" stroke-width="2" fill="none"/>
+      </g>
+      <circle cx="52" cy="17" r="3" fill="#2f7d4f"/><circle cx="52" cy="35" r="3" fill="#f5d06f"/><circle cx="52" cy="53" r="3" fill="#2f7d4f"/><circle cx="52" cy="71" r="3" fill="#2f7d4f"/>
+    </symbol>
+    <symbol id="house" viewBox="0 0 80 70">
+      <g filter="url(#rough)" stroke="#2a2420" stroke-width="2.4" stroke-linejoin="round">
+        <path d="M8 32 L40 8 L72 32 Z" fill="#e98f74"/>
+        <rect x="14" y="30" width="52" height="34" fill="#fbf3df"/>
+        <rect x="34" y="44" width="12" height="20" fill="#93d6bb"/>
+        <rect x="20" y="38" width="10" height="9" fill="#c9d6ea"/><rect x="50" y="38" width="10" height="9" fill="#c9d6ea"/>
+      </g>
+    </symbol>
+    <symbol id="hall" viewBox="0 0 80 70">
+      <g filter="url(#rough)" stroke="#2a2420" stroke-width="2.4" stroke-linejoin="round">
+        <path d="M6 24 L40 6 L74 24 Z" fill="#c9d6ea"/>
+        <rect x="10" y="24" width="60" height="8" fill="#fbf3df"/>
+        <path d="M16 32v26M30 32v26M50 32v26M64 32v26" stroke-width="4"/>
+        <rect x="6" y="58" width="68" height="8" fill="#fbf3df"/>
+      </g>
+    </symbol>
+    <symbol id="factory" viewBox="0 0 80 70">
+      <g filter="url(#rough)" stroke="#2a2420" stroke-width="2.4" stroke-linejoin="round">
+        <rect x="52" y="8" width="10" height="26" fill="#e98f74"/>
+        <path d="M8 64 V34 L24 24 V34 L40 24 V34 L56 24 V34 H72 V64 Z" fill="#f5d06f"/>
+        <rect x="18" y="44" width="10" height="10" fill="#c9d6ea"/><rect x="38" y="44" width="10" height="10" fill="#c9d6ea"/><rect x="58" y="44" width="8" height="20" fill="#93d6bb"/>
+      </g>
+    </symbol>
+    <symbol id="tower" viewBox="0 0 80 70">
+      <g filter="url(#rough)" stroke="#2a2420" stroke-width="2.4" stroke-linejoin="round" fill="none">
+        <path d="M40 10 L26 64 M40 10 L54 64 M31 44h18 M34 30h12" />
+        <path d="M30 14q10-10 20 0M24 9q16-16 32 0" stroke="#2f5fb3"/>
+        <rect x="16" y="62" width="48" height="4" fill="#2a2420"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>

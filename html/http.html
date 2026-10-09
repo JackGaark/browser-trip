@@ -1,0 +1,57 @@
+<!-- 4. HTTP -->
+<section
+  class="scene blue"
+  id="s-http"
+  data-ring="1 · fetch"
+  aria-labelledby="h-http"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">http/2: many streams, one connection</p>
+      <h2 id="h-http">Ten files, one pipe</h2>
+      <p>
+        The HTML arrives first and names nine more files. HTTP/1.1 can carry
+        only one response at a time per connection, so browsers open up to six
+        connections per site, each with its own handshake, and queue the rest.
+        HTTP/2 interleaves every file as streams over the one connection it
+        already has.
+      </p>
+      <div class="seg" role="radiogroup" aria-label="Protocol">
+        <input type="radio" name="proto" id="pH1" value="h1" /><label for="pH1"
+          >HTTP/1.1</label
+        >
+        <input type="radio" name="proto" id="pH2" value="h2" checked /><label
+          for="pH2"
+          >HTTP/2</label
+        >
+      </div>
+      <div class="row">
+        <button type="button" class="btn pri" id="httpGo">
+          ▶ Load the page
+        </button>
+      </div>
+      <p class="readout" id="httpSum" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="panel"><div class="host" id="httpSvg"></div></div>
+      <ul class="legend" style="color: var(--muted)">
+        <li><span class="sw" style="background: #ffb35c"></span>html</li>
+        <li><span class="sw" style="background: #7fd4ff"></span>css</li>
+        <li><span class="sw" style="background: #ffe08a"></span>js</li>
+        <li><span class="sw" style="background: #d7b4ff"></span>font</li>
+        <li><span class="sw" style="background: #7be0a6"></span>image</li>
+        <li>
+          <span
+            class="sw"
+            style="border-top: 2px dashed #a3b3d8; height: 0"
+          ></span
+          >queued
+        </li>
+      </ul>
+      <p class="note">
+        Simulated with a 40 ms round trip and a 12 Mbps link. c1–c6 mark which
+        HTTP/1.1 connection carried each file.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+/* Raster */
+canvas.rcv {
+  display: block;
+  margin-inline: auto;
+  border-radius: 4px;
+  max-width: 100%;
+}
+.workers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font: 0.8rem var(--f-mono);
+  color: var(--muted);
+}
+.workers span {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+.workers i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.budget {
+  display: grid;
+  gap: 6px;
+}
+.budget-bar {
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+.budget-bar i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: var(--acc2);
+}

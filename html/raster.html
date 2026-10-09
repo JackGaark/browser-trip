@@ -1,0 +1,53 @@
+<!-- 10. Raster -->
+<section
+  class="scene blue"
+  id="s-raster"
+  data-ring="6 · composite"
+  aria-labelledby="h-ras"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">raster: tiles in parallel</p>
+      <h2 id="h-ras">Pixels, one tile at a time</h2>
+      <p>
+        Each layer is cut into tiles, and several raster workers fill them in
+        parallel, nearest the viewport first. Scroll faster than they can keep
+        up and you see blank checkerboard tiles for a moment.
+      </p>
+      <p>
+        Then the compositor, running on the GPU, stacks the finished tiles into
+        a frame. On a 60 Hz screen it gets 16.7 ms to do that, every single
+        frame.
+      </p>
+      <div class="row">
+        <button type="button" class="btn pri" id="rGo">▶ Raster</button>
+        <button type="button" class="btn" id="rScroll">Scroll down</button>
+      </div>
+      <p class="readout" id="rSum" role="status"></p>
+      <div class="budget">
+        <span class="note" id="fClock"
+          >Frames composited while you’ve been here: 0</span
+        >
+        <div class="budget-bar" aria-hidden="true"><i id="fBar"></i></div>
+      </div>
+    </div>
+    <div class="stagebox">
+      <div class="panel" style="display: grid; gap: 10px">
+        <div class="host" id="rHost">
+          <canvas
+            class="rcv"
+            id="rcv"
+            role="img"
+            aria-label="A page divided into tiles, with a viewport outline and raster workers filling tiles."
+          ></canvas>
+        </div>
+        <div class="workers" aria-hidden="true">
+          <span><i style="background: #ffb35c"></i>worker 1</span
+          ><span><i style="background: #7fd4ff"></i>worker 2</span
+          ><span><i style="background: #7be0a6"></i>worker 3</span
+          ><span><i style="background: #d7b4ff"></i>worker 4</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

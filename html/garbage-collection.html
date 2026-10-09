@@ -1,0 +1,44 @@
+<!-- 12. GC -->
+<section
+  class="scene sketch"
+  id="s-gc"
+  data-ring="memory"
+  aria-labelledby="h-gc"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">garbage collection</p>
+      <h2 id="h-gc">Memory tidies up after itself, mostly</h2>
+      <p>
+        Every object your code creates takes memory. The garbage collector
+        starts from the roots, such as global variables and the current call
+        stack, follows every reference, and frees whatever it can’t reach. Most
+        objects die young, so V8 sweeps a small nursery often and promotes
+        survivors to an old generation that it checks less often.
+      </p>
+      <div class="row">
+        <button type="button" class="btn" id="gcAlloc">+ Allocate</button>
+        <button type="button" class="btn" id="gcDrop">
+          ✂ Drop a reference
+        </button>
+      </div>
+      <div class="row">
+        <button type="button" class="btn pri" id="gcMinor">
+          Minor GC (nursery)
+        </button>
+        <button type="button" class="btn" id="gcMajor">
+          Major GC (everything)
+        </button>
+      </div>
+      <div class="stats" id="gcStats" role="status"></div>
+      <p class="readout" id="gcMsg" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="panel"><div class="host" id="gcSvg"></div></div>
+      <p class="note">
+        Objects that survive two nursery sweeps get promoted to the old
+        generation. Green outlines mean “reachable”.
+      </p>
+    </div>
+  </div>
+</section>

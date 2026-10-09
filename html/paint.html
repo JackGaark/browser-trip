@@ -1,0 +1,42 @@
+<!-- 8. Paint -->
+<section
+  class="scene blue"
+  id="s-paint"
+  data-ring="5 · paint"
+  aria-labelledby="h-paint"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">paint: a list of draw calls</p>
+      <h2 id="h-paint">Painting is a to-do list</h2>
+      <p>
+        Paint doesn’t produce pixels yet. It records an ordered list of drawing
+        commands, called a display list: fill this rectangle, draw this text,
+        place this image. Order matters, because later commands land on top.
+      </p>
+      <div class="row">
+        <button type="button" class="btn pri" id="pPlay">
+          ▶ Play the list
+        </button>
+        <button type="button" class="btn" id="pStep">Step</button>
+        <label class="check"
+          ><input type="checkbox" id="pSwap" /> Draw the card last</label
+        >
+      </div>
+      <p class="readout" id="pSum" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="panel paint-grid">
+        <ol class="dlist" id="dlist" aria-label="Display list"></ol>
+        <canvas
+          class="pcv"
+          id="pcv"
+          width="320"
+          height="220"
+          role="img"
+          aria-label="Canvas showing the display list drawn so far."
+        ></canvas>
+      </div>
+    </div>
+  </div>
+</section>

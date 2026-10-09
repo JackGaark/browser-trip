@@ -1,0 +1,68 @@
+/* Blueprint diagrams */
+.wire {
+  stroke: var(--line);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+}
+.bnode rect {
+  fill: rgba(14, 28, 63, 0.9);
+  stroke: #6d86c4;
+  stroke-width: 1.2;
+}
+.bnode .t {
+  font-size: 12.5px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+.bnode .s {
+  font-size: 10.5px;
+  fill: var(--muted);
+}
+.bnode.ask rect {
+  stroke: var(--acc);
+  stroke-width: 2.2;
+}
+.bnode.miss rect {
+  stroke: var(--bad);
+  stroke-width: 2.2;
+}
+.bnode.hit rect {
+  stroke: var(--ok);
+  stroke-width: 2.6;
+}
+.pkt circle {
+  fill: var(--acc);
+}
+.pkt.ans circle {
+  fill: var(--acc2);
+}
+.pkt text {
+  font: 600 11px var(--f-mono);
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+.log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 3px;
+  font: 0.8rem/1.45 var(--f-mono);
+  max-height: 13rem;
+  overflow: auto;
+}
+.log li {
+  display: grid;
+  grid-template-columns: 5.6em minmax(0, 1fr);
+  gap: 8px;
+}
+.log li span:first-child {
+  color: var(--acc);
+  text-align: right;
+}
+.log li.ok span:last-child {
+  color: var(--ok);
+}

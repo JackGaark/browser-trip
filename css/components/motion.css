@@ -1,0 +1,68 @@
+/* Motion helpers */
+.pip-g {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.bob {
+  animation: bob 2.8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+@keyframes bob {
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.hop {
+  animation: hop 0.7s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+@keyframes hop {
+  30% {
+    transform: translateY(-24px) scaleY(1.06);
+  }
+  55% {
+    transform: translateY(0) scale(1.1, 0.88);
+  }
+  75% {
+    transform: translateY(-6px);
+  }
+}
+.shake {
+  animation: shake 0.45s;
+}
+@keyframes shake {
+  20% {
+    transform: translateX(-7px) rotate(-4deg);
+  }
+  45% {
+    transform: translateX(7px) rotate(4deg);
+  }
+  70% {
+    transform: translateX(-4px);
+  }
+}
+.wave {
+  animation: wave 1.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: 0% 100%;
+}
+@keyframes wave {
+  50% {
+    transform: rotate(-18deg);
+  }
+}
+.blink {
+  animation: blink 4.2s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes blink {
+  0%,
+  94%,
+  100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.1);
+  }
+}

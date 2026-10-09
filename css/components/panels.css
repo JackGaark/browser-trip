@@ -1,0 +1,50 @@
+/* Panels */
+.panel {
+  background: var(--soft);
+  border: 2.5px solid var(--ink);
+  border-radius: 14px 10px 16px 12px;
+  box-shadow: 4px 5px 0 rgba(42, 36, 32, 0.16);
+  padding: 16px;
+  min-width: 0;
+}
+.blue .panel {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(19, 42, 90, 0.6);
+  box-shadow: 0 0 46px rgba(70, 120, 255, 0.1);
+  position: relative;
+}
+.blue .panel::before,
+.blue .panel::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--acc2);
+  opacity: 0.6;
+}
+.blue .panel::before {
+  top: -2px;
+  left: -2px;
+  border-right: 0;
+  border-bottom: 0;
+}
+.blue .panel::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: 0;
+  border-top: 0;
+}
+.host {
+  width: 100%;
+  min-width: 0;
+}
+svg.fig {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+svg text {
+  font-family: var(--f-body);
+}

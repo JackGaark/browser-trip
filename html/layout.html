@@ -1,0 +1,66 @@
+<!-- 7. Layout -->
+<section
+  class="scene sketch"
+  id="s-layout"
+  data-ring="3 · style + layout"
+  aria-labelledby="h-lay"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">layout</p>
+      <h2 id="h-lay">Every box gets a position and a size</h2>
+      <p>
+        With the DOM and CSS combined into computed styles, layout works out
+        where each box goes and how big it is. Change the viewport width and the
+        whole page gets recalculated. The page on the right is real HTML and
+        CSS, and the numbers are measured live by your browser.
+      </p>
+      <div class="range">
+        <label for="vpW"
+          >Viewport width <output id="vpOut" for="vpW"></output></label
+        ><input
+          type="range"
+          id="vpW"
+          min="240"
+          max="640"
+          step="2"
+          value="640"
+        />
+      </div>
+      <label class="check"
+        ><input type="checkbox" id="showBoxes" checked /> Show box
+        outlines</label
+      >
+      <p class="readout" id="layStat" role="status"></p>
+      <p class="note">
+        Below 430 px a container query stacks the columns; below 300 px the nav
+        hides.
+      </p>
+    </div>
+    <div class="stagebox vp-wrap">
+      <div class="vp" id="vp">
+        <div class="mp">
+          <header class="mp-h" data-box="header">
+            <b>example.com</b>
+            <nav aria-label="Demo navigation">
+              <span>docs</span><span>blog</span><span>about</span>
+            </nav>
+          </header>
+          <div class="mp-main">
+            <article data-box="article">
+              <b>Layout, measured</b>Drag the slider. Every box gets its x, y,
+              width and height worked out again.
+            </article>
+            <aside data-box="aside">sidebar</aside>
+          </div>
+          <div class="mp-cards">
+            <div data-box="card 1">card</div>
+            <div data-box="card 2">card</div>
+            <div data-box="card 3">card</div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>

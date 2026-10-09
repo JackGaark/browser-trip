@@ -1,0 +1,92 @@
+/* Fixed chrome */
+.ring {
+  position: fixed;
+  z-index: 40;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 5px;
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.94);
+  color: #2a2420;
+  border: 2px solid #2a2420;
+  font: 600 0.8rem var(--f-mono);
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+.ring.dark {
+  background: rgba(14, 28, 63, 0.92);
+  color: #e8eefc;
+  border-color: #3a5291;
+}
+@media (max-width: 640px) {
+  .ring {
+    top: auto;
+    right: auto;
+    left: 12px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+  }
+}
+.ring svg {
+  width: 30px;
+  height: 30px;
+  transform: rotate(-90deg);
+}
+.ring .trk {
+  fill: none;
+  stroke: currentColor;
+  stroke-opacity: 0.18;
+  stroke-width: 3;
+}
+.ring .arc {
+  fill: none;
+  stroke: #d9573f;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s;
+}
+.ring.dark .arc {
+  stroke: #ffb35c;
+}
+.ring .dot {
+  fill: #d9573f;
+}
+.ring.dark .dot {
+  fill: #ffb35c;
+}
+.sound {
+  position: fixed;
+  z-index: 40;
+  right: 12px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 2px solid #2a2420;
+  background: #fffaf0;
+  color: #2a2420;
+  font: 700 0.88rem var(--f-body);
+  cursor: pointer;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18);
+}
+.sound svg {
+  width: 18px;
+  height: 18px;
+}
+.sound .waves {
+  opacity: 0.25;
+}
+.sound[aria-pressed="true"] {
+  background: #2a2420;
+  color: #fffaf0;
+}
+.sound[aria-pressed="true"] .waves {
+  opacity: 1;
+}

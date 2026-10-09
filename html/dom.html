@@ -1,0 +1,47 @@
+<!-- 5. DOM -->
+<section
+  class="scene blue"
+  id="s-dom"
+  data-ring="2 · parse"
+  aria-labelledby="h-dom"
+>
+  <div class="inner">
+    <div class="copy">
+      <p class="tag">parse html into the dom</p>
+      <h2 id="h-dom">Text in, tree out</h2>
+      <p>
+        The bytes arrive as plain text. A tokenizer reads it into start tags,
+        end tags and text, and a tree builder turns those into the DOM, the live
+        tree that JavaScript works with. It is forgiving: leave out
+        <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> and it quietly
+        adds them.
+      </p>
+      <div class="field">
+        <label for="domSrc"
+          >Edit the HTML (parsed by your browser’s real parser)</label
+        >
+        <textarea id="domSrc" spellcheck="false"></textarea>
+      </div>
+      <div class="row">
+        <button type="button" class="btn pri" id="domGo">▶ Parse</button>
+        <button type="button" class="btn" id="domSloppy">
+          Try sloppy HTML
+        </button>
+        <button type="button" class="btn" id="domReset">Reset</button>
+      </div>
+      <p class="readout" id="domSum" role="status"></p>
+    </div>
+    <div class="stagebox">
+      <div class="panel" style="display: grid; gap: 10px">
+        <div class="tape" aria-hidden="true">
+          <div class="tape-inner" id="tape"></div>
+        </div>
+        <div class="tree-host" id="domTree"></div>
+      </div>
+      <p class="note">
+        Amber dashed nodes were added by the parser because they weren’t in your
+        source.
+      </p>
+    </div>
+  </div>
+</section>

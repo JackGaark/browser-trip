@@ -1,0 +1,73 @@
+/* GC */
+.blob rect {
+  stroke: var(--ink);
+  stroke-width: 2.2;
+}
+.blob.young rect {
+  fill: #fbe7b5;
+}
+.blob.old rect {
+  fill: #c9d6ea;
+}
+.blob.mark rect {
+  stroke: var(--ok);
+  stroke-width: 3.5;
+}
+.blob text {
+  font: 600 10px var(--f-mono);
+  fill: var(--ink);
+}
+.blob {
+  transition:
+    opacity 0.45s,
+    transform 0.45s;
+}
+.blob.gone {
+  opacity: 0;
+}
+.root rect {
+  fill: var(--ink);
+}
+.root text {
+  fill: var(--bg);
+  font: 700 12px var(--f-mono);
+}
+.root.mark rect {
+  fill: var(--ok);
+}
+.edge {
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  fill: none;
+  opacity: 0.65;
+}
+.edge.cut {
+  stroke: var(--bad);
+  stroke-dasharray: 4 3;
+  opacity: 1;
+}
+.region {
+  fill: rgba(255, 255, 255, 0.45);
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-dasharray: 7 5;
+}
+.region-l {
+  font-family: var(--f-hand);
+  font-size: 20px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+.mk-ink {
+  fill: var(--ink);
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  font-weight: 700;
+}
+.stats b {
+  font: 800 1.5rem var(--f-display);
+  margin-right: 4px;
+}

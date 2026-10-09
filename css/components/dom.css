@@ -1,0 +1,93 @@
+/* DOM */
+.tape {
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  padding: 8px 0;
+  white-space: nowrap;
+  font: 0.8rem var(--f-mono);
+  color: var(--muted);
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+.tape-inner {
+  display: inline-flex;
+  gap: 6px;
+  transition: transform 0.25s ease-out;
+}
+.tape span {
+  padding: 2px 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.tape span.cur {
+  color: var(--bg);
+  background: var(--acc2);
+}
+.tape span.past {
+  color: var(--ink);
+}
+.tree-host {
+  overflow-x: auto;
+}
+.dn rect {
+  fill: rgba(14, 28, 63, 0.95);
+  stroke: #8ea6e0;
+  stroke-width: 1.2;
+}
+.dn text {
+  font: 600 11.5px var(--f-mono);
+  fill: var(--ink);
+}
+.dn.text rect {
+  stroke-dasharray: 2 3;
+  stroke: var(--muted);
+}
+.dn.text text {
+  fill: var(--muted);
+  font-style: italic;
+  font-weight: 400;
+}
+.dn.added rect {
+  stroke: var(--acc);
+  stroke-dasharray: 5 3;
+  stroke-width: 1.8;
+}
+.dn.added text {
+  fill: var(--acc);
+}
+.dlink {
+  stroke: #5f78b8;
+  stroke-width: 1.2;
+  fill: none;
+}
+.hid {
+  opacity: 0;
+}
+.dn,
+.dlink {
+  transition: opacity 0.25s;
+}
+textarea {
+  width: 100%;
+  font: 0.82rem/1.5 var(--f-mono);
+  color: var(--ink);
+  background: rgba(10, 20, 48, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  resize: vertical;
+  min-height: 11rem;
+}
+.field {
+  display: grid;
+  gap: 6px;
+}
+.field > label {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
